@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    .red {
+    color: red;
+}
+</style>
+
+<body>
+
+<!-- <div class="container">
+        <input type="text" id="name">
+            <p id="content" class="content">noi dung</p>
+            <button id="btn1" class="btn btn-warning">doimau</button>
+        <button id="btn2" class="btn btn-warning">an/hien</button>
+        
+        <button id="btn3" class="btn btn-warning">hienthiten</button>
+        
+        <button id="btn4" class="btn btn-warning">Thay noi dung</button>
+        <p id="showName"></p>
+    </div>
+
+    
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#content").toggleClass("red")
+            })
+            $("#btn2").click(function(){
+                $("#content").toggle(500)
+            })
+            $("#btn3").click(function(){
+                let name= $("#name").val()
+                $("#showName").text(name)
+            })
+             $("#btn4").click(function(){
+                $("#content").html("<strong>Noi dung moi</strong>")
+            })
+        }) -->
+
+
+   <div class="container mt-5">
+    <div class="row g-2 align-items-start"> <!-- g-2 để sát nhau hơn -->
+      
+      <!-- Cột Account -->
+      <div class="col-md-6">
+        <label>Account</label><br>
+        <input type="text" id="name" placeholder="name" class="form-control w-75 mb-2">
+        <p id="showName" style="color: red; display: none;">Vui lòng nhập tên</p>
+        <button id="btn1" class="btn btn-info">Account</button>
+      </div>
+
+      <!-- Cột Password -->
+      <div class="col-md-6">
+        <label>Password</label><br>
+        <input type="text" id="password" placeholder="********" class="form-control w-75 mb-2">
+        <p id="showPassword" style="color: red; display: none;">Vui lòng nhập mật khẩu</p>
+        <button id="btn2" class="btn btn-info">Password</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        var name = $("#name").val().trim();
+
+        if(name === ""){
+          $("#showName").text("vui lòng nhập tên").css("color", "red").show();
+        } else {
+          $("#showName").text("Tên của bạn là: " + name).css("color", "green").show();
+        }
+      });
+
+      $("#btn2").click(function(){
+        var pass = $("#password").val().trim();
+
+        if(pass === ""){
+          $("#showPassword").text("vui lòng nhập mật khẩu").css("color", "red").show();
+        } else {
+          $("#showPassword").text("mật khẩu là: " + pass).css("color", "green").show();
+        }
+      });
+    });
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
